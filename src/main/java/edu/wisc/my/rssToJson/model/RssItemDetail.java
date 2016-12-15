@@ -1,4 +1,4 @@
-package main.java.edu.wisc.my.rssToJson.model;
+package edu.wisc.my.rssToJson.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.*;

@@ -1,4 +1,4 @@
-package main.java.edu.wisc.my.rssToJson.controller;
+package edu.wisc.my.rssToJson.controller;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import main.java.edu.wisc.my.rssToJson.service.IRssToJsonService;
+import edu.wisc.my.rssToJson.service.IRssToJsonService;
 
 @Controller
 public class RSSToJSONController {
@@ -67,7 +67,9 @@ public class RSSToJSONController {
 	    
 	  @RequestMapping(value="/rssTransform/demo/feed")
 	  public @ResponseBody void getDemoJson(HttpServletRequest request, HttpServletResponse response){
-           String paramaterizedURL = env.getRequiredProperty("demo.url");
+      String paramaterizedURL = env.getRequiredProperty("demo.url");
+		  //DO NOT COMMIT
+		  //String paramaterizedURL = "http://www.rollingstone.com/music/rss";
 	       if(!StringUtils.isEmpty(paramaterizedURL)){
 	    	   getJsonifiedRssUrl(request, response, paramaterizedURL);
 	       }

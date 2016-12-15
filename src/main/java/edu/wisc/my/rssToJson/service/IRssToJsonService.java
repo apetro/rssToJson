@@ -1,4 +1,4 @@
-package main.java.edu.wisc.my.rssToJson.service;
+package edu.wisc.my.rssToJson.service;
 
 import java.io.InputStream;
 

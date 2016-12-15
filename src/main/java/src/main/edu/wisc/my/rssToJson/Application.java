@@ -1,4 +1,4 @@
-package main.java;
+package src.main.edu.wisc.my.rssToJson;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -9,6 +9,9 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
+import edu.wisc.my.rssToJson.controller.RSSToJSONController;
+import edu.wisc.my.rssToJson.service.RsstoJsonServiceImpl;
+
 @SpringBootApplication
 @ComponentScan
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
@@ -16,7 +19,10 @@ import org.springframework.context.annotation.PropertySource;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-       SpringApplication.run(Application.class, args);
+    SpringApplication.run(Application.class, args);
+//       RSSToJSONController rjc = new RSSToJSONController();
+//       rjc.setRSSToJSONService(new RsstoJsonServiceImpl());
+//       rjc.getDemoJson(null, null);
     }
 
 }

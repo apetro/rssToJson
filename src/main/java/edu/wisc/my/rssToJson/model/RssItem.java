@@ -1,8 +1,10 @@
-package main.java.edu.wisc.my.rssToJson.model;
+package edu.wisc.my.rssToJson.model;
+
+import java.util.ArrayList;
 
 public class RssItem {
 	private RssItemDetail item;
-
+	
 	public RssItemDetail getItem() {
 		return item;
 	}
